@@ -11,3 +11,7 @@ Instrumentator().instrument(app).expose(app)
 @app.get("/root")
 async def home():
     return {'message':'FastApi with prometheus'}
+
+
+# this will expose an endpoint /metrics
+# when you open this URL, you will get Prometheus scrapable metrics like:
